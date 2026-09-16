@@ -1,0 +1,454 @@
+/* ===== Site Layout ===== */
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+.site-wrapper main {
+  flex: 1;
+}
+
+/* ===== Header ===== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 36px;
+  background: transparent;
+}
+
+.site-logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.site-header nav a:hover {
+  color: #161616;
+  text-decoration: underline;
+}
+
+.site-header nav a.active-link {
+  color: #161616;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 32px 36px;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ===== Home Page ===== */
+.home-container {
+  background-image: url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&auto=format&fit=crop&q=80");
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.home-hero {
+  background: linear-gradient(transparent, rgba(0,0,0,0.7) 30%);
+  width: 100%;
+  padding: 60px 36px 48px;
+  color: #fff;
+}
+
+.home-hero h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0 0 16px;
+  color: #fff;
+  max-width: 600px;
+  line-height: 1.2;
+}
+
+.home-hero p {
+  font-size: 16px;
+  max-width: 500px;
+  margin-bottom: 28px;
+  opacity: 0.9;
+}
+
+.home-cta-link {
+  display: inline-block;
+  background: #FF8C38;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.home-cta-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,140,56,0.4);
+}
+
+/* ===== About Page ===== */
+.about-page {
+  background: #fff;
+}
+
+.about-hero-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-content {
+  padding: 36px 36px 48px;
+  max-width: 700px;
+}
+
+.about-content h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #161616;
+  margin: 0 0 24px;
+  line-height: 1.25;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4D4D4D;
+  margin-bottom: 16px;
+}
+
+.about-cta {
+  background: #FFCC8D;
+  padding: 32px;
+  border-radius: 8px;
+  margin-top: 36px;
+}
+
+.about-cta h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #161616;
+  margin: 0 0 20px;
+  line-height: 1.3;
+}
+
+.about-cta-link {
+  display: inline-block;
+  background: #161616;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: transform 0.15s;
+}
+
+.about-cta-link:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Vans List Page ===== */
+.van-list-container {
+  padding: 36px 36px 48px;
+}
+
+.van-list-container h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #161616;
+  margin: 0 0 24px;
+}
+
+.van-list-filter-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.van-type {
+  display: inline-block;
+  padding: 8px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-style: normal;
+  text-transform: capitalize;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.van-type:hover {
+  transform: scale(1.05);
+}
+
+.van-type.simple {
+  background: #E17654;
+  color: #fff;
+  opacity: 0.55;
+}
+.van-type.simple.selected {
+  opacity: 1;
+}
+
+.van-type.luxury {
+  background: #161616;
+  color: #fff;
+  opacity: 0.55;
+}
+.van-type.luxury.selected {
+  opacity: 1;
+}
+
+.van-type.rugged {
+  background: #115E59;
+  color: #fff;
+  opacity: 0.55;
+}
+.van-type.rugged.selected {
+  opacity: 1;
+}
+
+.van-type.clear-filters {
+  background: transparent;
+  color: #4D4D4D;
+  text-decoration: underline;
+  padding: 8px 14px;
+}
+
+.van-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 36px;
+}
+
+.van-tile {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.van-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.van-tile a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 0 0 16px;
+}
+
+.van-tile img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.van-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 4px 4px;
+}
+
+.van-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #161616;
+  margin: 0;
+}
+
+.van-info p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #161616;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.van-info p span {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4D4D4D;
+}
+
+.van-tile i {
+  margin-left: 4px;
+}
+
+/* ===== Van Detail Page ===== */
+.van-detail-container {
+  padding: 36px 36px 48px;
+  max-width: 800px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  transition: color 0.2s;
+}
+
+.back-button:hover {
+  color: #161616;
+  text-decoration: underline;
+}
+
+.van-detail img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.van-detail i {
+  margin-top: 16px;
+}
+
+.van-detail h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #161616;
+  margin: 12px 0 8px;
+}
+
+.van-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #161616;
+  margin-bottom: 16px !important;
+}
+
+.van-price span {
+  font-weight: 700;
+}
+
+.van-detail p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4D4D4D;
+  margin: 0 0 24px;
+}
+
+.link-button {
+  display: inline-block;
+  background: #FF8C38;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.link-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,140,56,0.4);
+}
+
+/* ===== Loading State ===== */
+.loading {
+  text-align: center;
+  padding: 80px 36px;
+  color: #4D4D4D;
+  font-size: 24px;
+}
+
+/* ===== Dark Mode Overrides ===== */
+@media (prefers-color-scheme: dark) {
+  .site-logo {
+    color: #f3f4f6;
+  }
+  .site-header nav a {
+    color: #9ca3af;
+  }
+  .site-header nav a:hover,
+  .site-header nav a.active-link {
+    color: #f3f4f6;
+  }
+
+  .home-hero h1 {
+    color: #fff;
+  }
+
+  .about-page {
+    background: #16171d;
+  }
+  .about-content h1,
+  .about-cta h2 {
+    color: #f3f4f6;
+  }
+  .about-content p {
+    color: #9ca3af;
+  }
+  .about-cta {
+    background: #2e303a;
+  }
+
+  .van-list-container h1,
+  .van-info h3,
+  .van-info p,
+  .van-detail h2,
+  .van-price {
+    color: #f3f4f6;
+  }
+
+  .van-tile {
+    background: #1f2028;
+  }
+
+  .van-info p span,
+  .van-detail p {
+    color: #9ca3af;
+  }
+
+  .back-button {
+    color: #9ca3af;
+  }
+  .back-button:hover {
+    color: #f3f4f6;
+  }
+
+  .van-type.clear-filters {
+    color: #9ca3af;
+  }
+}
