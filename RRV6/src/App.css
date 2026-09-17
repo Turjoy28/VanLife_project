@@ -386,6 +386,32 @@
   box-shadow: 0 6px 20px rgba(255,140,56,0.4);
 }
 
+/* ===== Host Nav ===== */
+.host-nav {
+  display: flex;
+  gap: 24px;
+  padding: 24px 36px 0;
+}
+
+.host-nav a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.host-nav a:hover {
+  color: #161616;
+  text-decoration: underline;
+}
+
+.host-nav a.active-link {
+  color: #161616;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 /* ===== Loading State ===== */
 .loading {
   text-align: center;
@@ -403,8 +429,14 @@
     color: #9ca3af;
   }
   .site-header nav a:hover,
-  .site-header nav a.active-link {
+  .site-header nav a.active-link,
+  .host-nav a:hover,
+  .host-nav a.active-link {
     color: #f3f4f6;
+  }
+
+  .host-nav a {
+    color: #9ca3af;
   }
 
   .home-hero h1 {
