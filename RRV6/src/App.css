@@ -412,6 +412,54 @@
   text-decoration: underline;
 }
 
+/* ===== Host Vans ===== */
+.host-vans-title {
+  font-size: 32px;
+  margin: 0 0 24px;
+  color: #161616;
+}
+
+.host-vans-list {
+  padding: 0 36px 36px;
+}
+
+.host-van-link-wrapper {
+  text-decoration: none;
+  color: #161616;
+}
+
+.host-van-single {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 18px 24px;
+  border-radius: 6px;
+  transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.host-van-single:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.host-van-single img {
+  height: 70px;
+  border-radius: 5px;
+  margin-right: 17px;
+}
+
+.host-van-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.host-van-info p {
+  margin: 0;
+  color: #4D4D4D;
+}
+
 /* ===== Loading State ===== */
 .loading {
   text-align: center;
@@ -471,6 +519,19 @@
 
   .van-info p span,
   .van-detail p {
+    color: #9ca3af;
+  }
+
+  .host-vans-title,
+  .host-van-info h3 {
+    color: #f3f4f6;
+  }
+
+  .host-van-single {
+    background-color: #1f2028;
+  }
+
+  .host-van-info p {
     color: #9ca3af;
   }
 

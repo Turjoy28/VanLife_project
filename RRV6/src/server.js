@@ -9,6 +9,7 @@ export function makeServer() {
         seeds(server) {
             server.create("van", {
                 id: "1",
+                hostId: "123",
                 name: "Modest Explorer",
                 price: 60,
                 description:
@@ -19,6 +20,7 @@ export function makeServer() {
             })
             server.create("van", {
                 id: "2",
+                hostId: "123",
                 name: "Beach Bum",
                 price: 80,
                 description:
@@ -29,6 +31,7 @@ export function makeServer() {
             })
             server.create("van", {
                 id: "3",
+                hostId: "123",
                 name: "Reliable Red",
                 price: 100,
                 description:
@@ -39,6 +42,7 @@ export function makeServer() {
             })
             server.create("van", {
                 id: "4",
+                hostId: "456",
                 name: "Dreamfinder",
                 price: 65,
                 description:
@@ -49,6 +53,7 @@ export function makeServer() {
             })
             server.create("van", {
                 id: "5",
+                hostId: "789",
                 name: "The Cruiser",
                 price: 120,
                 description:
@@ -59,6 +64,7 @@ export function makeServer() {
             })
             server.create("van", {
                 id: "6",
+                hostId: "123",
                 name: "Green Wonder",
                 price: 70,
                 description:
@@ -71,14 +77,26 @@ export function makeServer() {
 
         routes() {
             this.namespace = "api"
+            this.logging = false
 
-            this.get("/vans", (schema) => {
+            this.get("/vans", (schema, request) => {
                 return schema.vans.all()
             })
 
             this.get("/vans/:id", (schema, request) => {
                 const id = request.params.id
                 return schema.vans.find(id)
+            })
+
+            this.get("/host/vans", (schema, request) => {
+                // Hard-code the hostId for now
+                return schema.vans.where({ hostId: "123" })
+            })
+
+            this.get("/host/vans/:id", (schema, request) => {
+                // Hard-code the hostId for now
+                const id = request.params.id
+                return schema.vans.where({ id, hostId: "123" })
             })
         },
     })
