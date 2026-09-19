@@ -460,6 +460,106 @@
   color: #4D4D4D;
 }
 
+/* ===== Host Van Detail Outlet Pages ===== */
+.host-van-detail-layout-container {
+  padding: 24px 36px 36px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.host-van-detail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.host-van-detail img {
+  width: 160px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.host-van-detail-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.host-van-detail-info-text i {
+  align-self: flex-start;
+}
+
+.host-van-detail-info-text h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #161616;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.host-van-detail-info-text h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #161616;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.host-van-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.host-van-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 16px;
+}
+
+.host-van-detail-row h4 {
+  width: 110px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #161616;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.host-van-detail-row span {
+  font-weight: 500;
+  color: #4D4D4D;
+  line-height: 1.6;
+}
+
+.host-van-price {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #dd680894;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.host-van-price .price-symbol {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.host-van-price .price-unit {
+  color: #4D4D4D;
+  font-size: 16px;
+  margin-left: 6px;
+}
+
+.host-van-detail-image {
+  height: 100px;
+  border-radius: 5px;
+}
+
 /* ===== Loading State ===== */
 .loading {
   text-align: center;
@@ -544,5 +644,32 @@
 
   .van-type.clear-filters {
     color: #9ca3af;
+  }
+}
+
+/* ===== Not Found Page ===== */
+.not-found-container {
+  padding: 80px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.not-found-container h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #161616;
+}
+
+a.link-button {
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .not-found-container h1 {
+    color: #f3f4f6;
   }
 }
